@@ -56,7 +56,7 @@ class HumanPlayer < Player
     
     def search_weapon
         lvl_wp = rand(1..6)
-        puts "AMAZING! Tu as trouvé une arme de niveau #{lvl_wp}!"
+        puts "AMAZING! Tu as trouvé une arme ︻╦╤─ de niveau #{lvl_wp}!"
             if lvl_wp > @weapon_level
                 @weapon_level = lvl_wp
                 puts "Cette arme est plus puissante tu la garde"

@@ -5,16 +5,14 @@ Bundler.require
 require_relative 'lib/game'
 require_relative 'lib/player'
 puts ""
-puts "======================================================================"
-puts "========================= JEU DE COMBAT CLAQUE ======================="
-puts "======================================================================"
+
 puts ""
 
-def display_ascii_art 
-  puts File.read("lib/ascii.txt")
+def display_ascii_start 
+  puts File.read("lib/ascii_start.txt")
 end
 
-display_ascii_art
+display_ascii_start
 
 puts "select your character:"
 name = gets.chomp
@@ -41,7 +39,7 @@ while human_player.life_points > 0 && (bot1.life_points > 0 || bot2.life_points 
     human_player.attack(bot2)
   end
     if (bot1.life_points == 0) && (bot2.life_points == 0)
-        puts "Congrats, you defeated the bots ( ͡° ͜ʖ ͡°)"
+        puts "Congrats, you defeated the bots"
         break
     end
   sleep 1
@@ -59,5 +57,9 @@ while human_player.life_points > 0 && (bot1.life_points > 0 || bot2.life_points 
   end
 end
 
-puts "GAME OVER..."
+def display_ascii_end
+  puts File.read("lib/ascii_end.txt")
+end
+
+display_ascii_end
 # binding.pry
