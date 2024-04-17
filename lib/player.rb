@@ -10,10 +10,6 @@ class Player
         @@enemies << self
     end
 
-    # def self.all_enemies
-    #     return @@enemies
-    # end
-
     def show_state # gives the life_points status of a given user.
         puts "#{@user_name} a #{@life_points} points de vie restants\n"
     end
